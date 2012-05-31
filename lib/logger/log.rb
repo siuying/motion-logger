@@ -72,7 +72,7 @@ module LoggerClassMethods
 end
 
 module Motion
-  class Log < DDLog
+  class Log < ::DDLog
     class << self
       alias_method :flush, :flushLog
     end

@@ -13,3 +13,12 @@ Motion::Project::App.setup do |app|
     dependency 'CocoaLumberjack'
   end
 end
+
+
+
+desc "Build the gem"
+task :gem do
+  sh "bundle exec gem build motion-logger.gemspec"
+  sh "mkdir -p pkg"
+  sh "mv *.gem pkg/"
+end
