@@ -2,10 +2,10 @@ describe "Motion::Log" do
   Log = Motion::Log
 
   before do
-    @file_logger = DDFileLogger.alloc.init
+    @file_logger = DDFileLogger.new
     @file_logger.rollingFrequency = 60 * 60 * 24
     @file_logger.logFileManager.maximumNumberOfLogFiles = 1
-    Log.addLogger(@file_logger)
+    Log.addLogger @file_logger    
   end
 
   after do
