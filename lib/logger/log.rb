@@ -71,13 +71,15 @@ module LoggerClassMethods
   end
 end
 
-class Log < DDLog
-  class << self
-    alias_method :flush, :flushLog
+module Motion
+  class Log < DDLog
+    class << self
+      alias_method :flush, :flushLog
+    end
+
+    extend LoggerClassMethods
+
+    @async = true
+    @level = :info
   end
-
-  extend LoggerClassMethods
-
-  @async = true
-  @level = :info
 end

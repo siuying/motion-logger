@@ -1,4 +1,6 @@
-describe "Log" do
+describe "Motion::Log" do
+  Log = Motion::Log
+
   before do
     @file_logger = DDFileLogger.alloc.init
     @file_logger.rollingFrequency = 60 * 60 * 24
