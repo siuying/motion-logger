@@ -12,5 +12,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "motion-logger"
   gem.require_paths = ["lib"]
-  gem.version       = BubbleWrap::VERSION
+  gem.version       = Motion::Logger::VERSION
+
+  gem.add_dependency 'motion-cocoapods', '>= 1.0.3'
+  gem.add_development_dependency 'motion-redgreen'
 end

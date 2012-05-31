@@ -2,6 +2,7 @@ $:.unshift("/Library/RubyMotion/lib")
 require 'motion/project'
 require 'rubygems'
 require 'motion-cocoapods'
+require 'motion-redgreen'
 require './lib/motion-logger'
 
 Motion::Project::App.setup do |app|
