@@ -1,4 +1,4 @@
-Gemspec.lock
+Gemfile.lock
 .repl_history
 build
 resources/*.nib
