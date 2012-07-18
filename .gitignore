@@ -1,4 +1,4 @@
-vendor/Pods/Pods.xcodeproj/project.pbxproj 
+vendor/Pods/Pods.xcodeproj/project.pbxproj
 vendor/Pods/build-*/
 Gemfile.lock
 .repl_history
