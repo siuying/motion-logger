@@ -42,7 +42,7 @@ Motion::Project::App.setup do |app|
 
   # Only needed if you are not already using pods
   app.pods do
-    dependency 'CocoaLumberjack'
+    pod 'CocoaLumberjack'
   end
 end
 ```

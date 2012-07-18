@@ -10,7 +10,7 @@ Motion::Project::App.setup do |app|
   app.name = 'logger'
 
   app.pods do
-    dependency 'CocoaLumberjack'
+    pod 'CocoaLumberjack'
   end
 end
 

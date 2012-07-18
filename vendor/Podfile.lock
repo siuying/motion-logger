@@ -1,6 +1,5 @@
 PODS:
-  - CocoaLumberjack (1.3.3)
+  - CocoaLumberjack (1.6)
 
 DEPENDENCIES:
-  - CocoaLumberjack
   - CocoaLumberjack
