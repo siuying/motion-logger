@@ -16,6 +16,15 @@ describe "Motion::Log" do
     Log.removeAllLoggers
   end
 
+  it "should escape %@ in logs" do
+      Log.warn "%@"
+      Log.flush
+
+      file = @file_logger.logFileManager.sortedLogFilePaths.first
+      logs = open(file).read
+      logs.should.include "%@"
+  end
+
   describe "FileLogger" do
     it "should log with specific levels" do
       Log.level = :warn
