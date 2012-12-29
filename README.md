@@ -7,6 +7,8 @@ Status: Basic features working
 ## Usage
 
 ```ruby
+Log = Motion::Log
+
 file_logger = DDFileLogger.new
 file_logger.rollingFrequency = 60 * 60 * 24
 file_logger.logFileManager.maximumNumberOfLogFiles = 1
