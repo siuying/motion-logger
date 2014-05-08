@@ -6,7 +6,7 @@ module LoggerClassMethods
     :verbose  => (1<<3), # 0...1000
     :debug    => (1<<3)    # 0...1000
   }
-  
+
   LEVELS = {
     :off      => 0,
     :error    => FLAGS[:error],
@@ -19,7 +19,7 @@ module LoggerClassMethods
   def level=(level)
     @level = level
   end
-  
+
   def level
     @level
   end
@@ -27,7 +27,7 @@ module LoggerClassMethods
   def async=(async)
     @async = async
   end
-  
+
   def async
     @async
   end
@@ -48,7 +48,7 @@ module LoggerClassMethods
     __log(:verbose, args.shift, *args)
   end
   alias_method :verbose, :debug
-  
+
   def logging?(flag)
     (LEVELS[level] & FLAGS[flag]) > 0
   end
