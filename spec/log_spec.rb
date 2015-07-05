@@ -25,6 +25,17 @@ describe "Motion::Log" do
       logs.should.include "%@"
   end
 
+  it "should use vargs logs" do
+      Log.warn "%@", "Hello"
+      Log.warn "%@ %@", "Foo", "Bar"
+      Log.flush
+
+      file = @file_logger.logFileManager.sortedLogFilePaths.first
+      logs = open(file).read
+      logs.should.include "Hello"
+      logs.should.include "Foo Bar"
+  end
+
   describe "FileLogger" do
     it "should log with specific levels" do
       Log.level = :warn
