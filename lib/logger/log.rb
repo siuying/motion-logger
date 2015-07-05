@@ -58,7 +58,7 @@ module LoggerClassMethods
     return unless logging?(flag)
     raise ArgumentError, "flag must be one of #{FLAGS.keys}" unless FLAGS.keys.include?(flag)
     async_enabled = self.async || (self.level == :error)
-    message = message.gsub('%', '%%') unless args.length
+    message = message.gsub('%', '%%') if args.length == 0
 
     log(async_enabled,
       level:LEVELS[level],
