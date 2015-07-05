@@ -10,7 +10,7 @@ Motion::Project::App.setup do |app|
   app.name = 'logger'
 
   app.pods do
-    pod 'CocoaLumberjack'
+    pod 'CocoaLumberjack', '~> 1.9.0'
   end
 end
 
