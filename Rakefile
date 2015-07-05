@@ -14,8 +14,6 @@ Motion::Project::App.setup do |app|
   end
 end
 
-
-
 desc "Build the gem"
 task :gem do
   sh "bundle exec gem build motion-logger.gemspec"
